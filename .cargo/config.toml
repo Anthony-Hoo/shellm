@@ -1,0 +1,6 @@
+[env]
+# Needed for some crates (e.g. `ring`) when building the musl target.
+CC_x86_64_unknown_linux_musl = "musl-gcc"
+
+[alias]
+release-musl = "build --release --target x86_64-unknown-linux-musl"
