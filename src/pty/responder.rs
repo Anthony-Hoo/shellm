@@ -35,7 +35,7 @@ impl VtResponder {
                     };
                     let seq = &self.pending[i..=end];
 
-                    // 拦截常见的终端查询序列并响应
+                    // respond to CSI sequences
                     if seq == b"\x1b[6n" {
                         // DSR (Device Status Report) - Cursor Position
                         let resp = cursor_position_response();
